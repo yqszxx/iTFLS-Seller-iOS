@@ -11,6 +11,7 @@
 		54235D761E4ADAE9003F47B5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54235D751E4ADAE9003F47B5 /* ThirdViewController.swift */; };
 		54235D801E4B2CE2003F47B5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 54235D7F1E4B2CE2003F47B5 /* Podfile */; };
 		54235D821E4B7224003F47B5 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54235D811E4B7224003F47B5 /* ScanCodeViewController.swift */; };
+		54235D841E4B818C003F47B5 /* MakeGatheringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54235D831E4B818C003F47B5 /* MakeGatheringViewController.swift */; };
 		5430F5951E4ABD27002037D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F5941E4ABD27002037D7 /* AppDelegate.swift */; };
 		5430F5971E4ABD27002037D7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F5961E4ABD27002037D7 /* FirstViewController.swift */; };
 		5430F5991E4ABD27002037D7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5430F5981E4ABD27002037D7 /* SecondViewController.swift */; };
@@ -48,6 +49,7 @@
 		54235D751E4ADAE9003F47B5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		54235D7F1E4B2CE2003F47B5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		54235D811E4B7224003F47B5 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
+		54235D831E4B818C003F47B5 /* MakeGatheringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeGatheringViewController.swift; sourceTree = "<group>"; };
 		5430F5911E4ABD27002037D7 /* iTFLS Seller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTFLS Seller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5430F5941E4ABD27002037D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5430F5961E4ABD27002037D7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				5430F5A21E4ABD27002037D7 /* Info.plist */,
 				54235D751E4ADAE9003F47B5 /* ThirdViewController.swift */,
 				54235D811E4B7224003F47B5 /* ScanCodeViewController.swift */,
+				54235D831E4B818C003F47B5 /* MakeGatheringViewController.swift */,
 			);
 			path = "iTFLS Seller";
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				5430F5951E4ABD27002037D7 /* AppDelegate.swift in Sources */,
 				54235D821E4B7224003F47B5 /* ScanCodeViewController.swift in Sources */,
 				54235D761E4ADAE9003F47B5 /* ThirdViewController.swift in Sources */,
+				54235D841E4B818C003F47B5 /* MakeGatheringViewController.swift in Sources */,
 				5430F5971E4ABD27002037D7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

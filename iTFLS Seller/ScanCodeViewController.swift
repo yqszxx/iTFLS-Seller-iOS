@@ -16,7 +16,7 @@ class ScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         session = AVCaptureSession()
         let videoCaptureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         let videoInput: AVCaptureDeviceInput!
@@ -37,7 +37,7 @@ class ScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             session.addOutput(metadataOutput)
             
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code]
+            metadataOutput.metadataObjectTypes = [AVMetadataObjectTypeCode128Code]
         } else {
             scanningNotPossible()
         }
@@ -46,13 +46,27 @@ class ScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         view.layer.addSublayer(previewLayer)
-        session.startRunning()
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if (session.isRunning == false) {
+            session.startRunning()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if (session.isRunning == true) {
+            session.stopRunning()
+        }
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-        print("OK!")
+        if let barcodeData = metadataObjects.first {
+            let barcodeReadable = barcodeData as? AVMetadataMachineReadableCodeObject
+            if let readableBarcode = barcodeReadable {
+                handleCode(code: readableBarcode.stringValue)
+            }
+        }
         session.stopRunning()
     }
     
@@ -69,7 +83,11 @@ class ScanCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - Custom Logic
+    func handleCode(code: String) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
